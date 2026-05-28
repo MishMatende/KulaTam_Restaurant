@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>KulaTam Restaurant</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #0f0d0b;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #fff;
+        min-height: 100vh;
+        padding-bottom: 80px; /* space for fixed bottom nav */
+      }
+
+      /* TOP BAR */
+      .top-bar {
+        padding: 40px 18px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #0f0d0b;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .top-logo span:first-child {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.01em;
+      }
+      .top-logo span:last-child {
+        display: block;
+        font-size: 10px;
+        color: #7a6f60;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-top: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 220px;
+      }
+      .top-actions {
+        display: flex;
+        gap: 8px;
+      }
+      .icon-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #1e1c1a;
+        border: 0.5px solid #2e2c28;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9a9080;
+        font-size: 16px;
+      }
+
+      /* HERO */
+      .hero-block {
+        margin: 0 16px 20px;
+        background: #1a1410;
+        border-radius: 22px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        min-height: 190px;
+      }
+      .hero-texture {
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(
+          60deg,
+          rgba(201, 122, 42, 0.06) 0,
+          rgba(201, 122, 42, 0.06) 1px,
+          transparent 1px,
+          transparent 14px
+        );
+        border-radius: 22px;
+      }
+      .hero-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(201, 122, 42, 0.15);
+        border: 0.5px solid rgba(201, 122, 42, 0.35);
+        border-radius: 20px;
+        padding: 4px 10px;
+        font-size: 10px;
+        color: #c97a2a;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-block h1 {
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 6px;
+      }
+      .hero-block h1 em {
+        color: #c97a2a;
+        font-style: normal;
+      }
+      .hero-tagline {
+        font-size: 12px;
+        color: #6a6050;
+        line-height: 1.5;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 18px;
+      }
+      .hero-cta-row {
+        display: flex;
+        gap: 8px;
+        position: relative;
+        z-index: 1;
+      }
+      .cta-main {
+        flex: 1;
+        background: #c97a2a;
+        border: none;
+        border-radius: 12px;
+        padding: 12px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+      }
+      .cta-sec {
+        width: 44px;
+        height: 44px;
+        background: #1e1c1a;
+        border: 0.5px solid #2e2c28;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9a9080;
+        font-size: 17px;
+        flex-shrink: 0;
+      }
+      .hero-rating {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        background: #0f0d0b;
+        border-radius: 10px;
+        padding: 8px 10px;
+        text-align: center;
+        z-index: 2;
+      }
+      .hero-rating-num {
+        font-size: 17px;
+        font-weight: 600;
+        color: #c97a2a;
+      }
+      .hero-rating-stars {
+        font-size: 9px;
+        color: #c97a2a;
+        letter-spacing: 1px;
+      }
+      .hero-rating-label {
+        font-size: 9px;
+        color: #4a4030;
+        margin-top: 1px;
+      }
+
+      /* SECTION HEADER */
+      .section-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 16px 10px;
+      }
+      .section-row span {
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+      }
+      .section-row a {
+        font-size: 11px;
+        color: #c97a2a;
+        text-decoration: none;
+      }
+
+      /* CATEGORIES */
+      .cats {
+        display: flex;
+        gap: 10px;
+        padding: 0 16px 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .cats::-webkit-scrollbar {
+        display: none;
+      }
+      .cat {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+      }
+      .cat-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+      }
+      .cat-icon.am {
+        background: #2a1e0e;
+        color: #c97a2a;
+      }
+      .cat-icon.lu {
+        background: #0e2010;
+        color: #4a9a5a;
+      }
+      .cat-icon.me {
+        background: #220e0e;
+        color: #c04040;
+      }
+      .cat-icon.dr {
+        background: #0e1622;
+        color: #4a7aaa;
+      }
+      .cat-icon.sn {
+        background: #1a1a0e;
+        color: #aaaa4a;
+      }
+      .cat-label {
+        font-size: 10px;
+        color: #6a6050;
+      }
+      .cat.active .cat-icon {
+        outline: 1.5px solid #c97a2a;
+        outline-offset: 2px;
+      }
+      .cat.active .cat-label {
+        color: #c97a2a;
+      }
+
+      /* FEATURED CARDS */
+      .featured-card {
+        margin: 0 16px 12px;
+        background: #1a1410;
+        border-radius: 18px;
+        overflow: hidden;
+        display: flex;
+      }
+      .featured-img {
+        width: 96px;
+        flex-shrink: 0;
+        background: #2e1e0e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .featured-img i {
+        font-size: 34px;
+        color: #c97a2a;
+        opacity: 0.6;
+      }
+      .featured-body {
+        flex: 1;
+        padding: 14px 14px 12px;
+      }
+      .feat-tag {
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c97a2a;
+        background: rgba(201, 122, 42, 0.12);
+        border-radius: 6px;
+        padding: 2px 7px;
+        display: inline-block;
+        margin-bottom: 6px;
+      }
+      .feat-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #e8ddd0;
+        margin-bottom: 4px;
+      }
+      .feat-desc {
+        font-size: 11px;
+        color: #5a5040;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+      .feat-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .feat-price {
+        font-size: 14px;
+        font-weight: 600;
+        color: #c97a2a;
+      }
+      .feat-add {
+        width: 30px;
+        height: 30px;
+        background: #c97a2a;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 17px;
+        cursor: pointer;
+        border: none;
+      }
+
+      /* SMALL GRID */
+      .small-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 16px 20px;
+      }
+      .small-card {
+        background: #1a1410;
+        border-radius: 16px;
+        padding: 14px;
+        cursor: pointer;
+      }
+      .small-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 19px;
+        margin-bottom: 10px;
+      }
+      .small-icon.lu {
+        background: #0e2010;
+        color: #4a9a5a;
+      }
+      .small-icon.me {
+        background: #220e0e;
+        color: #c04040;
+      }
+      .small-icon.dr {
+        background: #0e1622;
+        color: #4a7aaa;
+      }
+      .small-icon.sn {
+        background: #1a1a0e;
+        color: #aaaa4a;
+      }
+      .small-name {
+        font-size: 13px;
+        font-weight: 600;
+        color: #e8ddd0;
+        margin-bottom: 2px;
+      }
+      .small-count {
+        font-size: 11px;
+        color: #5a5040;
+      }
+      .small-arrow {
+        font-size: 13px;
+        color: #3a3020;
+        margin-top: 8px;
+      }
+
+      /* BOTTOM NAV */
+      .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        padding: 12px 0 28px;
+        background: #0f0d0b;
+        border-top: 0.5px solid #1e1c1a;
+        z-index: 20;
+      }
+      .bnav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+      }
+      .bnav-item i {
+        font-size: 22px;
+        color: #3a3020;
+      }
+      .bnav-item.active i {
+        color: #c97a2a;
+      }
+      .bnav-item span {
+        font-size: 9px;
+        color: #3a3020;
+        letter-spacing: 0.04em;
+      }
+      .bnav-item.active span {
+        color: #c97a2a;
+      }
+      .bnav-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #c97a2a;
+        margin: -2px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-logo">
+        <span>KulaTam Restaurant</span>
+        <span>Wanag Energy (Opp. </br>Royal Finesse) · Kitengela</span>
+      </div>
+      <div class="top-actions">
+        <div class="icon-btn"><i class="ti ti-search"></i></div>
+        <div class="icon-btn"><i class="ti ti-bell"></i></div>
+      </div>
+    </div>
+
+    <div class="hero-block">
+      <div class="hero-texture"></div>
+      <div class="hero-pill"><i class="ti ti-clock"></i> Open until 9 pm</div>
+      <h1>Good food,<br /><em>great</em> vibes.</h1>
+      <p class="hero-tagline">
+        Fresh meals & handcrafted drinks,<br />made just for you.
+      </p>
+      <div class="hero-cta-row">
+        <button class="cta-main">Browse menu</button>
+        <div class="cta-sec"><i class="ti ti-map-pin"></i></div>
+      </div>
+      <div class="hero-rating">
+        <div class="hero-rating-num">4.8</div>
+        <div class="hero-rating-stars">★★★★★</div>
+        <div class="hero-rating-label">Google</div>
+      </div>
+    </div>
+
+    <div class="section-row">
+      <span>Categories</span>
+      <a href="#">See all</a>
+    </div>
+    <div class="cats">
+      <div class="cat active">
+        <div class="cat-icon am"><i class="ti ti-coffee"></i></div>
+        <span class="cat-label">Breakfast</span>
+      </div>
+      <div class="cat">
+        <div class="cat-icon lu"><i class="ti ti-salad"></i></div>
+        <span class="cat-label">Lunch</span>
+      </div>
+      <div class="cat">
+        <div class="cat-icon me"><i class="ti ti-meat"></i></div>
+        <span class="cat-label">Meat</span>
+      </div>
+      <div class="cat">
+        <div class="cat-icon dr"><i class="ti ti-glass"></i></div>
+        <span class="cat-label">Drinks</span>
+      </div>
+      <div class="cat">
+        <div class="cat-icon sn"><i class="ti ti-cookie"></i></div>
+        <span class="cat-label">Snacks</span>
+      </div>
+    </div>
+
+    <div class="section-row" style="padding-top: 22px">
+      <span>Featured</span>
+    </div>
+
+    <div class="featured-card">
+      <div class="featured-img"><i class="ti ti-egg-fried"></i></div>
+      <div class="featured-body">
+        <div class="feat-tag">Morning pick</div>
+        <div class="feat-name">Full breakfast plate</div>
+        <div class="feat-desc">
+          Eggs, toast, sausage & fresh juice to start your day right.
+        </div>
+        <div class="feat-footer">
+          <span class="feat-price">KSh 650</span>
+          <button class="feat-add">
+            <i class="ti ti-plus" style="font-size: 15px"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-card">
+      <div class="featured-img" style="background: #1a1410">
+        <i
+          class="ti ti-coffee"
+          style="color: #c97a2a; opacity: 0.6; font-size: 34px"
+        ></i>
+      </div>
+      <div class="featured-body">
+        <div
+          class="feat-tag"
+          style="color: #7aaa9a; background: rgba(74, 154, 90, 0.12)"
+        >
+          Best seller
+        </div>
+        <div class="feat-name">Chai latte</div>
+        <div class="feat-desc">
+          Spiced tea with steamed milk. Warm, smooth, and satisfying.
+        </div>
+        <div class="feat-footer">
+          <span class="feat-price">KSh 280</span>
+          <button class="feat-add" style="background: #4a9a5a">
+            <i class="ti ti-plus" style="font-size: 15px"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-row">
+      <span>More options</span>
+    </div>
+    <div class="small-grid">
+      <div class="small-card">
+        <div class="small-icon lu"><i class="ti ti-salad"></i></div>
+        <div class="small-name">Lunch</div>
+        <div class="small-count">12 items</div>
+        <div class="small-arrow"><i class="ti ti-arrow-right"></i></div>
+      </div>
+      <div class="small-card">
+        <div class="small-icon me"><i class="ti ti-meat"></i></div>
+        <div class="small-name">Meat grill</div>
+        <div class="small-count">8 items</div>
+        <div class="small-arrow"><i class="ti ti-arrow-right"></i></div>
+      </div>
+      <div class="small-card">
+        <div class="small-icon dr"><i class="ti ti-glass"></i></div>
+        <div class="small-name">Drinks</div>
+        <div class="small-count">16 items</div>
+        <div class="small-arrow"><i class="ti ti-arrow-right"></i></div>
+      </div>
+      <div class="small-card">
+        <div class="small-icon sn"><i class="ti ti-cookie"></i></div>
+        <div class="small-name">Snacks</div>
+        <div class="small-count">9 items</div>
+        <div class="small-arrow"><i class="ti ti-arrow-right"></i></div>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <div class="bnav-item active">
+        <i class="ti ti-home"></i>
+        <div class="bnav-dot"></div>
+        <span>Home</span>
+      </div>
+      <div class="bnav-item">
+        <i class="ti ti-menu-2"></i>
+        <span>Menu</span>
+      </div>
+      <div class="bnav-item">
+        <i class="ti ti-shopping-bag"></i>
+        <span>Order</span>
+      </div>
+      <div class="bnav-item">
+        <i class="ti ti-map-pin"></i>
+        <span>Find us</span>
+      </div>
+    </nav>
+  </body>
+</html>
