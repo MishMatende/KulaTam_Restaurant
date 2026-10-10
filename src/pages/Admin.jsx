@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import {
   announcementStatus,
@@ -120,6 +121,9 @@ function SignIn() {
         <button className="btn-primary form-submit" disabled={busy}>
           {busy ? "Signing in…" : "Sign in"}
         </button>
+        <Link className="auth-link" to="/admin/forgot-password">
+          Forgot password?
+        </Link>
       </form>
     </div>
   );

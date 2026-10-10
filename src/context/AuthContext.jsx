@@ -44,9 +44,32 @@ export function AuthProvider({ children }) {
 
   const signOut = useCallback(() => supabase.auth.signOut(), []);
 
+  // The email links back to /admin/reset-password on this site (not the
+  // project's default Site URL, which may belong to the other branch).
+  const sendPasswordReset = useCallback(async (email) => {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/admin/reset-password`,
+    });
+    if (error) throw error;
+  }, []);
+
+  const updatePassword = useCallback(async (password) => {
+    const { error } = await supabase.auth.updateUser({ password });
+    if (error) throw error;
+  }, []);
+
   const value = useMemo(
-    () => ({ enabled: Boolean(supabase), user: session?.user ?? null, isAdmin, loading, signIn, signOut }),
-    [session, isAdmin, loading, signIn, signOut],
+    () => ({
+      enabled: Boolean(supabase),
+      user: session?.user ?? null,
+      isAdmin,
+      loading,
+      signIn,
+      signOut,
+      sendPasswordReset,
+      updatePassword,
+    }),
+    [session, isAdmin, loading, signIn, signOut, sendPasswordReset, updatePassword],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

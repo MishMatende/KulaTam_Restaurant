@@ -2182,3 +2182,30 @@ html {
     right: 9px;
   }
 }
+
+/* Sign-in / password reset */
+
+.auth-link {
+  align-self: center;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 4px;
+}
+
+.auth-hint {
+  color: #857868;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.page-header p strong {
+  color: var(--text);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.empty-state .form-submit {
+  margin-top: 18px;
+}

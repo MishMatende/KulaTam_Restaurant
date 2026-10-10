@@ -35,6 +35,18 @@ Staff post them at `/admin`: sign in with an existing account that has been
 added to `admins_kt`. Announcements can be scheduled (show from / until) or
 saved as drafts. Visitors only ever see published announcements that are live.
 
+### Password reset
+
+Staff who forget their password use "Forgot password?" on `/admin`. The email
+links back to `/admin/reset-password` on this site. Because sign-in is shared
+with the other branch, add these to **Supabase → Authentication → URL
+Configuration → Redirect URLs**, or the link falls back to the project's Site URL:
+
+- `https://<this-site's-domain>/admin/reset-password`
+- `http://localhost:5173/admin/reset-password` (local development)
+
+Accounts are shared, so a new password applies at both branches.
+
 To change the seed menu, edit `src/data/menu.json` and regenerate the SQL:
 
 ```bash
