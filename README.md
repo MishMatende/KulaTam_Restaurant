@@ -17,7 +17,7 @@ from Supabase instead.
 ## Database (Supabase)
 
 All tables, functions and policies end in `_kt` (`categories_kt`,
-`subcategories_kt`, `menu_items_kt`, `admins_kt`) so they never clash with the
+`subcategories_kt`, `menu_items_kt`, `admins_kt`, `announcements_kt`) so they never clash with the
 other branch's tables in the shared project.
 
 1. Open `supabase/migrations/20261010000000_kulatam_menu_kt.sql`.
@@ -25,6 +25,15 @@ other branch's tables in the shared project.
    the tables and RLS policies and inserts the full menu. It is safe to re-run.
 3. To let someone edit the menu, add them to `admins_kt` (see the bottom of the
    SQL file). Being signed in is not enough, so other-branch users can't edit.
+
+### Announcements
+
+Run `supabase/migrations/20261010120000_announcements_kt.sql` in the SQL editor
+after the menu migration. Announcements appear under the bell icon.
+
+Staff post them at `/admin`: sign in with an existing account that has been
+added to `admins_kt`. Announcements can be scheduled (show from / until) or
+saved as drafts. Visitors only ever see published announcements that are live.
 
 To change the seed menu, edit `src/data/menu.json` and regenerate the SQL:
 

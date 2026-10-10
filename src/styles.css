@@ -1849,3 +1849,336 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
+/* =====================================================================
+   Announcements (bell) + staff admin page
+   ===================================================================== */
+
+.icon-btn {
+  position: relative;
+}
+
+.unread-dot {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px #120f0c;
+}
+
+.announcement-list {
+  max-height: min(360px, 55vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.notice-body,
+.notice-meta {
+  display: block;
+}
+
+.notice-meta {
+  margin-top: 6px;
+  color: #5e5346 !important;
+  font-size: 11px !important;
+}
+
+.popover-empty {
+  color: #857868;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.popover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 12px;
+}
+
+.popover-footer .open {
+  color: #6bc67d;
+}
+
+.popover-footer .closed {
+  color: #d46a6a;
+}
+
+.popover-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.admin-auth {
+  max-width: 420px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #857868;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.admin-user span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.admin-card {
+  background: linear-gradient(to bottom, #1a1410, #120e0b);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-card h3 {
+  font-size: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.field > span {
+  display: flex;
+  justify-content: space-between;
+  color: #8f826f;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.field em {
+  font-style: normal;
+  font-weight: 500;
+  color: #5e5346;
+  letter-spacing: 0;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  background: #0d0a08;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  outline: none;
+  color-scheme: dark;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.5;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(201, 122, 42, 0.5);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #b3a693;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.form-error {
+  color: #d46a6a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-submit {
+  height: 48px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-submit:disabled,
+.text-btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.text-btn.danger {
+  color: #d46a6a;
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-item {
+  background: linear-gradient(to bottom, #16110d, #120e0b);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.admin-item.editing {
+  border-color: rgba(201, 122, 42, 0.5);
+}
+
+.admin-item strong {
+  font-size: 16px;
+}
+
+.admin-item p {
+  color: #857868;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-item-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-item-time {
+  color: #5e5346;
+  font-size: 12px;
+}
+
+.admin-item-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.admin-item-actions .text-btn {
+  height: 38px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-chip.live {
+  background: rgba(74, 154, 90, 0.14);
+  color: #6bc67d;
+}
+
+.status-chip.scheduled {
+  background: rgba(74, 122, 170, 0.14);
+  color: var(--blue);
+}
+
+.status-chip.expired,
+.status-chip.draft {
+  background: rgba(255, 255, 255, 0.05);
+  color: #857868;
+}
+
+@media (max-width: 980px) {
+  .admin-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* 16px stops iOS zooming into form fields. */
+  .field input,
+  .field textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-card {
+    border-radius: 20px;
+    padding: 18px;
+  }
+
+  .field-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .form-actions .form-submit {
+    flex: 1;
+  }
+
+  .unread-dot {
+    top: 8px;
+    right: 9px;
+  }
+}

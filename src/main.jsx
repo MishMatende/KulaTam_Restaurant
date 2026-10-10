@@ -5,13 +5,16 @@ import "@tabler/icons-webfont/dist/tabler-icons.min.css";
 import "./styles.css";
 import App from "./App";
 import { MenuProvider } from "./context/MenuContext";
+import { AuthProvider } from "./context/AuthContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <MenuProvider>
-        <App />
-      </MenuProvider>
+      <AuthProvider>
+        <MenuProvider>
+          <App />
+        </MenuProvider>
+      </AuthProvider>
     </BrowserRouter>
   </StrictMode>,
 );
