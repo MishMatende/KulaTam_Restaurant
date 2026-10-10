@@ -1,0 +1,348 @@
+{
+  "categories": [
+    {
+      "slug": "breakfast",
+      "name": "Breakfast",
+      "icon": "ti-coffee",
+      "tone": "am",
+      "description": "Hearty plates, eggs and pancakes to start your day.",
+      "subcategories": [
+        {
+          "slug": "breakfast-platters",
+          "name": "Breakfast Platters",
+          "items": [
+            { "slug": "kulatam-breakfast", "name": "KulaTam Breakfast", "price": 650, "description": "Our signature house breakfast platter, the best way to start the day.", "featured": true, "badge": "House Special" },
+            { "slug": "english-breakfast", "name": "English Breakfast", "price": 700, "description": "A full English-style plate with eggs, sausage, toast and the classic trimmings." },
+            { "slug": "traditional-breakfast", "name": "Traditional Breakfast", "price": 600, "description": "A Kenyan-style morning plate of traditional favourites." }
+          ]
+        },
+        {
+          "slug": "eggs-pancakes",
+          "name": "Eggs & Pancakes",
+          "items": [
+            { "slug": "fried-eggs", "name": "Fried Eggs", "price": 150, "description": "Eggs fried to your liking.", "veg": true },
+            { "slug": "boiled-eggs", "name": "Boiled Eggs", "price": 150, "description": "Hard-boiled eggs, simple and filling.", "veg": true },
+            { "slug": "spanish-omelette", "name": "Spanish Omelette", "price": 250, "description": "Fluffy omelette with potato, onion and peppers.", "veg": true },
+            { "slug": "pancake", "name": "Pancake", "price": 200, "description": "Soft, thin pancakes served warm.", "veg": true },
+            { "slug": "american-pancake", "name": "American Pancake", "price": 300, "description": "Thick, fluffy American-style pancakes.", "veg": true },
+            { "slug": "sausages", "name": "Sausages", "price": 150, "description": "Grilled sausages, great with eggs or chips." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hot-drinks",
+      "name": "Hot Drinks",
+      "icon": "ti-mug",
+      "tone": "pu",
+      "description": "Chai, herbal infusions, milk and porridge.",
+      "subcategories": [
+        {
+          "slug": "tea",
+          "name": "Tea",
+          "items": [
+            { "slug": "african-tea", "name": "African Tea", "price": 150, "description": "Kenyan chai brewed with milk.", "veg": true },
+            { "slug": "special-tea", "name": "Special Tea", "price": 200, "description": "Rich, creamy house chai.", "veg": true },
+            { "slug": "masala-tea", "name": "Masala Tea", "price": 200, "description": "Milky chai brewed with warming masala spices.", "veg": true },
+            { "slug": "black-tea", "name": "Black Tea", "price": 100, "description": "Classic black tea, no milk.", "veg": true },
+            { "slug": "black-masala-tea", "name": "Black Masala Tea", "price": 120, "description": "Black tea brewed with masala spices.", "veg": true },
+            { "slug": "lemon-tea", "name": "Lemon Tea", "price": 150, "description": "Black tea with fresh lemon.", "veg": true },
+            { "slug": "swahili-tea", "name": "Swahili Tea", "price": 150, "description": "Coastal-style spiced tea.", "veg": true },
+            { "slug": "hibiscus-tea", "name": "Hibiscus Tea", "price": 150, "description": "Tangy, caffeine-free hibiscus infusion.", "veg": true },
+            { "slug": "chamomile-tea", "name": "Chamomile Tea", "price": 150, "description": "Calming chamomile herbal infusion.", "veg": true },
+            { "slug": "green-tea", "name": "Green Tea", "price": 150, "description": "Light, refreshing green tea.", "veg": true },
+            { "slug": "dawa", "name": "Dawa", "price": 250, "description": "Hot lemon, ginger and honey. Soothing and warming.", "veg": true }
+          ]
+        },
+        {
+          "slug": "milk-porridge",
+          "name": "Milk & Porridge",
+          "items": [
+            { "slug": "plain-milk", "name": "Plain Milk", "price": 200, "description": "A mug of hot fresh milk.", "veg": true },
+            { "slug": "lemon-water", "name": "Warm Lemon Water", "price": 100, "description": "Warm water with fresh lemon.", "veg": true },
+            { "slug": "porridge", "name": "Porridge", "price": 150, "description": "Warm, smooth uji porridge.", "veg": true }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "snacks",
+      "name": "Snacks",
+      "icon": "ti-cookie",
+      "tone": "sn",
+      "description": "Bites, wraps, sandwiches and burgers.",
+      "subcategories": [
+        {
+          "slug": "bites",
+          "name": "Bites",
+          "items": [
+            { "slug": "beef-katlesi", "name": "Beef Katlesi", "price": 150, "description": "Spiced minced beef cutlet, crumbed and fried." },
+            { "slug": "kebab", "name": "Kebab", "price": 150, "description": "Spiced minced meat kebab." },
+            { "slug": "kebab-special", "name": "Kebab Special", "price": 250, "description": "Our loaded kebab with extras." },
+            { "slug": "scotch-eggs", "name": "Scotch Eggs", "price": 250, "description": "Boiled eggs wrapped in spiced minced meat, crumbed and fried." },
+            { "slug": "samosa", "name": "Samosa", "price": 120, "description": "Crispy pastry filled with spiced minced meat." },
+            { "slug": "veggie-samosa", "name": "Veggie Samosa", "price": 120, "description": "Crispy pastry with a spiced vegetable filling.", "veg": true },
+            { "slug": "kaimati", "name": "Kaimati", "price": 50, "description": "Sweet, crunchy Swahili dumplings glazed in syrup.", "veg": true }
+          ]
+        },
+        {
+          "slug": "wraps",
+          "name": "Wraps",
+          "items": [
+            { "slug": "wrap", "name": "Wrap", "price": 250, "description": "Soft tortilla wrap with a savoury filling." },
+            { "slug": "wrap-special", "name": "Wrap Special", "price": 350, "description": "Loaded wrap with extra fillings." }
+          ]
+        },
+        {
+          "slug": "sandwiches",
+          "name": "Sandwiches",
+          "items": [
+            { "slug": "chicken-sandwich", "name": "Chicken Sandwich", "price": 800, "description": "Toasted sandwich packed with tender chicken." },
+            { "slug": "chicken-cheese-sandwich", "name": "Chicken & Cheese Sandwich", "price": 700, "description": "Toasted chicken sandwich with melted cheese." },
+            { "slug": "vegetable-sandwich", "name": "Vegetable Sandwich", "price": 600, "description": "Toasted sandwich with fresh vegetables.", "veg": true },
+            { "slug": "egg-sandwich", "name": "Egg Sandwich", "price": 600, "description": "Toasted sandwich with egg.", "veg": true }
+          ]
+        },
+        {
+          "slug": "burgers",
+          "name": "Burgers",
+          "items": [
+            { "slug": "texas-burger", "name": "Texas Burger", "price": 750, "description": "Stacked beef burger, Texas-style." },
+            { "slug": "cheese-burger", "name": "Cheeseburger", "price": 700, "description": "Beef patty with melted cheese in a soft bun." },
+            { "slug": "beef-burger", "name": "Beef Burger", "price": 600, "description": "Juicy beef patty in a soft bun." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mains",
+      "name": "Mains",
+      "icon": "ti-salad",
+      "tone": "lu",
+      "description": "Swahili rice dishes, traditional favourites and soups.",
+      "subcategories": [
+        {
+          "slug": "swahili-dishes",
+          "name": "Swahili Dishes",
+          "items": [
+            { "slug": "biryani", "name": "Biryani", "price": 800, "description": "Fragrant spiced rice layered with meat, Swahili-style.", "featured": true, "badge": "Swahili Classic" },
+            { "slug": "pilau", "name": "Pilau", "price": 500, "description": "Rice cooked with pilau masala and meat." },
+            { "slug": "mbaazi", "name": "Mbaazi", "price": 300, "description": "Pigeon peas simmered in coconut sauce.", "veg": true }
+          ]
+        },
+        {
+          "slug": "traditional-foods",
+          "name": "Traditional Foods",
+          "items": [
+            { "slug": "githeri", "name": "Githeri", "price": 250, "description": "Boiled maize and beans.", "veg": true },
+            { "slug": "githeri-special", "name": "Githeri Special", "price": 350, "description": "Githeri fried with vegetables and extras." },
+            { "slug": "matoke", "name": "Matoke", "price": 300, "description": "Green bananas stewed in a light tomato sauce.", "veg": true },
+            { "slug": "matoke-beef-goat", "name": "Matoke with Beef or Goat", "price": 600, "description": "Stewed green bananas cooked with your choice of beef or goat." },
+            { "slug": "matoke-chicken-kienyeji", "name": "Matoke with Kienyeji Chicken", "price": 800, "description": "Stewed green bananas with free-range chicken." },
+            { "slug": "matoke-chicken-broiler", "name": "Matoke with Broiler Chicken", "price": 700, "description": "Stewed green bananas with broiler chicken." }
+          ]
+        },
+        {
+          "slug": "soups",
+          "name": "Soups",
+          "items": [
+            { "slug": "bone-soup", "name": "Bone Soup", "price": 250, "description": "Slow-simmered beef bone broth." },
+            { "slug": "vegetable-soup", "name": "Vegetable Soup", "price": 250, "description": "Hearty soup of fresh garden vegetables.", "veg": true },
+            { "slug": "ossobuco-soup", "name": "Ossobuco Soup", "price": 350, "description": "Rich soup of slow-cooked beef shank." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "meat-fish",
+      "name": "Meat & Fish",
+      "icon": "ti-meat",
+      "tone": "me",
+      "description": "Chicken, beef, goat, matumbo and fish, fried or stewed.",
+      "subcategories": [
+        {
+          "slug": "kienyeji-chicken",
+          "name": "Kienyeji Chicken",
+          "items": [
+            { "slug": "kienyeji-chicken-wet-fry", "name": "Kienyeji Chicken Wet Fry", "price": 800, "description": "Free-range chicken fried in a tomato and onion sauce." },
+            { "slug": "kienyeji-chicken-dry-fry", "name": "Kienyeji Chicken Dry Fry", "price": 800, "description": "Free-range chicken fried with onions and peppers." },
+            { "slug": "kienyeji-chicken-stew", "name": "Kienyeji Chicken Stew (Tumbukiza)", "price": 800, "description": "Free-range chicken slow-stewed with vegetables." }
+          ]
+        },
+        {
+          "slug": "broiler-chicken",
+          "name": "Broiler Chicken",
+          "items": [
+            { "slug": "chicken-tikka", "name": "Chicken Tikka", "price": 700, "description": "Marinated, spiced chicken pieces, tikka-style." },
+            { "slug": "chicken-rosti", "name": "Chicken Rosti", "price": 600, "description": "Pan-roasted chicken in a rich spiced sauce." },
+            { "slug": "chicken-curry", "name": "Chicken Curry", "price": 700, "description": "Chicken simmered in a fragrant curry sauce." },
+            { "slug": "chicken-cashew-nut", "name": "Chicken Cashew Nut", "price": 700, "description": "Stir-fried chicken with crunchy cashew nuts." },
+            { "slug": "chicken-pineapple", "name": "Chicken Pineapple", "price": 700, "description": "Sweet and savoury chicken with pineapple." }
+          ]
+        },
+        {
+          "slug": "beef",
+          "name": "Beef",
+          "items": [
+            { "slug": "beef-wet-fry", "name": "Beef Wet Fry", "price": 500, "description": "Beef fried in a tomato and onion sauce." },
+            { "slug": "beef-dry-fry", "name": "Beef Dry Fry", "price": 500, "description": "Beef fried with onions and peppers." },
+            { "slug": "beef-stew", "name": "Beef Stew (Tumbukiza)", "price": 600, "description": "Beef slow-stewed with vegetables." },
+            { "slug": "kima", "name": "Kima", "price": 600, "description": "Spiced minced beef in a rich sauce." },
+            { "slug": "kima-matar", "name": "Kima Matar", "price": 600, "description": "Spiced minced beef cooked with green peas." },
+            { "slug": "beef-curry", "name": "Beef Curry", "price": 600, "description": "Beef simmered in a fragrant curry sauce." }
+          ]
+        },
+        {
+          "slug": "goat",
+          "name": "Goat",
+          "items": [
+            { "slug": "goat-wet-fry", "name": "Goat Wet Fry", "price": 500, "description": "Goat meat fried in a tomato and onion sauce." },
+            { "slug": "goat-dry-fry", "name": "Goat Dry Fry", "price": 500, "description": "Goat meat fried with onions and peppers." },
+            { "slug": "goat-stew", "name": "Goat Stew (Tumbukiza)", "price": 550, "description": "Goat meat slow-stewed with vegetables." }
+          ]
+        },
+        {
+          "slug": "matumbo",
+          "name": "Matumbo (Tripe)",
+          "items": [
+            { "slug": "tripe-wet-fry", "name": "Tripe Wet Fry", "price": 400, "description": "Tender tripe in a tomato and onion sauce." },
+            { "slug": "tripe-dry-fry", "name": "Tripe Dry Fry", "price": 400, "description": "Tripe fried with onions and peppers." },
+            { "slug": "tripe-vegetable-rice", "name": "Tripe with Vegetable Rice", "price": 500, "description": "Tripe served with vegetable rice." }
+          ]
+        },
+        {
+          "slug": "fish",
+          "name": "Fish",
+          "items": [
+            { "slug": "fish-wet-fry", "name": "Fish Wet Fry", "price": 750, "description": "Whole fish fried and simmered in a tomato and onion sauce." },
+            { "slug": "fish-dry-fry", "name": "Fish Dry Fry", "price": 750, "description": "Whole fish deep-fried until crisp." },
+            { "slug": "coconut-fish", "name": "Coconut Fish", "price": 750, "description": "Fish simmered in creamy coconut sauce, coastal-style.", "featured": true, "badge": "Chef's Pick" },
+            { "slug": "fish-stew", "name": "Fish Stew", "price": 850, "description": "Fish slow-stewed in a rich tomato sauce." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sides",
+      "name": "Sides",
+      "icon": "ti-bowl",
+      "tone": "tl",
+      "description": "Rice, ugali, chips, greens and salads to go with your meal.",
+      "subcategories": [
+        {
+          "slug": "rice-ugali-chapati",
+          "name": "Rice, Ugali & Chapati",
+          "items": [
+            { "slug": "plain-rice", "name": "Plain Rice", "price": 150, "description": "Steamed white rice.", "veg": true },
+            { "slug": "vegetable-rice", "name": "Vegetable Rice", "price": 300, "description": "Rice cooked with mixed vegetables.", "veg": true },
+            { "slug": "chinese-fried-rice", "name": "Chinese Fried Rice", "price": 400, "description": "Wok-fried rice with egg and vegetables." },
+            { "slug": "brown-ugali", "name": "Brown Ugali", "price": 150, "description": "Wholemeal maize ugali.", "veg": true },
+            { "slug": "brown-chapati", "name": "Brown Chapati", "price": 70, "description": "Soft wholemeal chapati.", "veg": true }
+          ]
+        },
+        {
+          "slug": "chips-potatoes",
+          "name": "Chips & Potatoes",
+          "items": [
+            { "slug": "fries", "name": "Fries", "price": 200, "description": "Golden, crispy chips.", "veg": true },
+            { "slug": "masala-chips", "name": "Masala Chips", "price": 300, "description": "Chips tossed in a tangy masala sauce.", "veg": true },
+            { "slug": "potato-wedges", "name": "Potato Wedges", "price": 300, "description": "Seasoned, skin-on potato wedges.", "veg": true },
+            { "slug": "mashed-potatoes", "name": "Mashed Potatoes", "price": 250, "description": "Creamy mashed potatoes.", "veg": true },
+            { "slug": "viazi-karai", "name": "Viazi Karai", "price": 300, "description": "Potatoes in a spiced batter, deep-fried.", "veg": true },
+            { "slug": "bhajia", "name": "Bhajia", "price": 300, "description": "Crispy spiced potato fritters.", "veg": true }
+          ]
+        },
+        {
+          "slug": "vegetables",
+          "name": "Vegetables",
+          "items": [
+            { "slug": "spinach", "name": "Spinach", "price": 100, "description": "Sautéed spinach.", "veg": true },
+            { "slug": "creamed-spinach", "name": "Creamed Spinach", "price": 150, "description": "Spinach cooked in cream.", "veg": true },
+            { "slug": "cabbage", "name": "Cabbage", "price": 100, "description": "Sautéed cabbage.", "veg": true },
+            { "slug": "managu", "name": "Managu", "price": 200, "description": "Sautéed African nightshade greens.", "veg": true },
+            { "slug": "creamed-managu", "name": "Creamed Managu", "price": 250, "description": "African nightshade greens cooked in cream.", "veg": true },
+            { "slug": "saga", "name": "Saga", "price": 200, "description": "Sautéed spider plant greens.", "veg": true },
+            { "slug": "creamed-saga", "name": "Creamed Saga", "price": 250, "description": "Spider plant greens cooked in cream.", "veg": true }
+          ]
+        },
+        {
+          "slug": "salads-extras",
+          "name": "Salads & Extras",
+          "items": [
+            { "slug": "kachumbari", "name": "Kachumbari", "price": 100, "description": "Fresh tomato, onion and coriander salad.", "veg": true },
+            { "slug": "coleslaw", "name": "Coleslaw", "price": 100, "description": "Creamy shredded cabbage and carrot salad.", "veg": true },
+            { "slug": "guacamole", "name": "Guacamole", "price": 200, "description": "Fresh mashed avocado with lime.", "veg": true },
+            { "slug": "honey", "name": "Honey", "price": 100, "description": "A side of honey.", "veg": true },
+            { "slug": "extra-teabag", "name": "Extra Teabag", "price": 20, "description": "An extra teabag for your cup.", "veg": true }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cold-drinks",
+      "name": "Cold Drinks",
+      "icon": "ti-glass",
+      "tone": "dr",
+      "description": "Fresh juices, lemonades, sodas and water.",
+      "subcategories": [
+        {
+          "slug": "fresh-juices",
+          "name": "Fresh Juices",
+          "items": [
+            { "slug": "mango-juice", "name": "Mango Juice", "price": 300, "description": "Fresh mango, blended daily.", "veg": true, "featured": true, "badge": "Fresh Daily" },
+            { "slug": "passion-juice", "name": "Passion Juice", "price": 300, "description": "Fresh passion fruit juice.", "veg": true },
+            { "slug": "cocktail-juice", "name": "Cocktail Juice", "price": 300, "description": "A blend of seasonal fresh fruits.", "veg": true },
+            { "slug": "safari-juice", "name": "Safari Juice", "price": 300, "description": "Our house mixed-fruit blend.", "veg": true },
+            { "slug": "peruvian-juice", "name": "Peruvian Juice", "price": 300, "description": "House speciality fresh juice.", "veg": true },
+            { "slug": "ukwaju-juice", "name": "Ukwaju Juice", "price": 300, "description": "Tangy tamarind juice.", "veg": true },
+            { "slug": "sugarcane-ginger", "name": "Sugarcane & Ginger", "price": 300, "description": "Fresh sugarcane juice with a ginger kick.", "veg": true }
+          ]
+        },
+        {
+          "slug": "lemonades",
+          "name": "Lemonades",
+          "items": [
+            { "slug": "strawberry-lemonade", "name": "Strawberry Lemonade", "price": 350, "description": "Lemonade blended with strawberries.", "veg": true },
+            { "slug": "mint-lemonade", "name": "Mint Lemonade", "price": 350, "description": "Lemonade with fresh mint.", "veg": true },
+            { "slug": "glacier-lemonade", "name": "Glacier Lemonade", "price": 350, "description": "Our signature ice-cold lemonade.", "veg": true },
+            { "slug": "tropical-lemonade", "name": "Tropical Lemonade", "price": 350, "description": "Lemonade with tropical fruits.", "veg": true }
+          ]
+        },
+        {
+          "slug": "coca-cola-range",
+          "name": "Coca-Cola Range",
+          "items": [
+            { "slug": "coca-cola-300ml", "name": "Soda 300ml (Coca-Cola)", "price": 70, "description": "Coca-Cola, Fanta or Sprite.", "veg": true },
+            { "slug": "coca-cola-500ml", "name": "Soda 500ml (Coca-Cola)", "price": 100, "description": "Coca-Cola, Fanta or Sprite.", "veg": true },
+            { "slug": "coca-cola-2l", "name": "Soda 2L (Coca-Cola)", "price": 220, "description": "Coca-Cola, Fanta or Sprite. Great for sharing.", "veg": true },
+            { "slug": "minute-maid", "name": "Minute Maid", "price": 100, "description": "Minute Maid fruit drink.", "veg": true },
+            { "slug": "predator", "name": "Predator", "price": 100, "description": "Predator energy drink.", "veg": true }
+          ]
+        },
+        {
+          "slug": "pepsi-range",
+          "name": "Pepsi Range",
+          "items": [
+            { "slug": "pepsi-300ml", "name": "Soda 300ml (Pepsi)", "price": 60, "description": "Pepsi, Mirinda or 7UP.", "veg": true },
+            { "slug": "pepsi-330ml", "name": "Soda 330ml Can (Pepsi)", "price": 60, "description": "Pepsi, Mirinda or 7UP in a can.", "veg": true },
+            { "slug": "pepsi-500ml", "name": "Soda 500ml (Pepsi)", "price": 80, "description": "Pepsi, Mirinda or 7UP.", "veg": true },
+            { "slug": "pepsi-2l", "name": "Soda 2L (Pepsi)", "price": 200, "description": "Pepsi, Mirinda or 7UP. Great for sharing.", "veg": true },
+            { "slug": "sting", "name": "Sting", "price": 70, "description": "Sting energy drink.", "veg": true }
+          ]
+        },
+        {
+          "slug": "water",
+          "name": "Water",
+          "items": [
+            { "slug": "keringet-500ml", "name": "Keringet 500ml", "price": 100, "description": "Keringet natural mineral water.", "veg": true },
+            { "slug": "keringet-1l", "name": "Keringet 1L", "price": 200, "description": "Keringet natural mineral water.", "veg": true },
+            { "slug": "dasani-500ml", "name": "Dasani 500ml", "price": 70, "description": "Dasani drinking water.", "veg": true },
+            { "slug": "dasani-1l", "name": "Dasani 1L", "price": 100, "description": "Dasani drinking water.", "veg": true },
+            { "slug": "aquafina-500ml", "name": "Aquafina 500ml", "price": 50, "description": "Aquafina drinking water.", "veg": true },
+            { "slug": "aquafina-1l", "name": "Aquafina 1L", "price": 100, "description": "Aquafina drinking water.", "veg": true }
+          ]
+        }
+      ]
+    }
+  ]
+}
