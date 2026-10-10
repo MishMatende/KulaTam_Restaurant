@@ -165,7 +165,7 @@ function AnnouncementManager() {
       ends_at: toLocalInput(a.ends_at),
       is_published: a.is_published,
     });
-    document.querySelector(".main-content")?.scrollTo({ top: 0, behavior: "smooth" });
+    document.querySelector(".staff-shell")?.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const run = async (action) => {
@@ -212,7 +212,7 @@ function AnnouncementManager() {
   };
 
   return (
-    <>
+    <div className="staff-content">
       <div className="page-header admin-header">
         <div>
           <h1>Announcements</h1>
@@ -336,6 +336,6 @@ function AnnouncementManager() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }

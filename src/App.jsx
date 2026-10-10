@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import StaffLayout from "./components/StaffLayout";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import FindUs from "./pages/FindUs";
@@ -14,10 +15,12 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="menu" element={<Menu />} />
         <Route path="find-us" element={<FindUs />} />
-        <Route path="admin" element={<Admin />} />
-        <Route path="admin/forgot-password" element={<ForgotPassword />} />
-        <Route path="admin/reset-password" element={<ResetPassword />} />
         <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="admin" element={<StaffLayout />}>
+        <Route index element={<Admin />} />
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="reset-password" element={<ResetPassword />} />
       </Route>
     </Routes>
   );

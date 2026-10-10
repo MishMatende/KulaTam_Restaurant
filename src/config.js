@@ -5,7 +5,10 @@ export const RESTAURANT = {
   shortLocation: "Owang Energy, Kitengela",
   landmark: "Opposite Royal Finesse",
   googleRating: 4.8,
-  mapsQuery: "Owang Energy, Kitengela, Kenya",
+  // Google can't find "Owang Energy" yet, so the map pins the landmark we're
+  // directly opposite. Replace with KulaTam's own Google Maps place or Plus
+  // Code once it's listed.
+  mapsQuery: "Royal Finesse Kitengela",
   timeZone: "Africa/Nairobi",
   // 24h "HH:MM", same every day. Adjust here if the hours change.
   hours: { open: "07:00", close: "21:00" },

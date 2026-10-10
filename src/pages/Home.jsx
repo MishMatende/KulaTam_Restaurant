@@ -26,9 +26,8 @@ export default function Home() {
           </h1>
 
           <p>
-            Fresh meals & handcrafted drinks, made just for you.{" "}
-            <br />
-            Visit us at Owang Energy, opposite Royal Finesse, Kitengela.
+            Fresh meals and handcrafted drinks, made just for you. Breakfast through
+            dinner, from Swahili classics to kienyeji chicken.
           </p>
 
           <div className="hero-buttons">
@@ -47,22 +46,28 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-stats">
-          <div className="stat-card">
-            <h3>{RESTAURANT.googleRating}</h3>
-            <span>Google Rating</span>
+        <dl className="hero-info">
+          <div>
+            <dt>Hours</dt>
+            <dd>
+              Every day, {status.openLabel} – {status.closeLabel}
+            </dd>
           </div>
-
-          <div className="stat-card">
-            <h3>{items.length}</h3>
-            <span>Menu Items</span>
+          <div>
+            <dt>Where</dt>
+            <dd>Owang Energy, opposite Royal Finesse, Kitengela</dd>
           </div>
-
-          <div className="stat-card">
-            <h3>{(status.isOpen ? status.closeLabel : status.openLabel).replace(" ", "")}</h3>
-            <span>{status.isOpen ? "Closes Tonight" : "Opens"}</span>
+          <div>
+            <dt>Rated</dt>
+            <dd>
+              <span className="stars" aria-hidden="true">★★★★★</span> {RESTAURANT.googleRating} on Google
+            </dd>
           </div>
-        </div>
+          <div>
+            <dt>Menu</dt>
+            <dd>{items.length} dishes &amp; drinks</dd>
+          </div>
+        </dl>
       </section>
 
       <div className="content-grid">
@@ -76,13 +81,14 @@ export default function Home() {
             {categories.map((category) => (
               <button
                 key={category.slug}
-                className="category"
+                className={`category ${category.tone}`}
                 onClick={() => navigate(`/menu?category=${category.slug}`)}
               >
-                <div className={`category-icon ${category.tone}`}>
+                <div className="category-icon">
                   <i className={`ti ${category.icon}`}></i>
                 </div>
                 <span>{category.name}</span>
+                <small>{countItems(category)} items</small>
               </button>
             ))}
           </div>

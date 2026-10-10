@@ -1,6 +1,7 @@
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { RESTAURANT } from "../config";
 import Notifications from "./Notifications";
+import Wordmark from "./Wordmark";
 
 export default function Topbar() {
   const { pathname } = useLocation();
@@ -21,7 +22,9 @@ export default function Topbar() {
   return (
     <header className="topbar">
       <div className="mobile-title">
-        <strong>{RESTAURANT.name}</strong>
+        <strong>
+          <Wordmark />
+        </strong>
         <span>{RESTAURANT.shortLocation}</span>
       </div>
 

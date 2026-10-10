@@ -7,22 +7,24 @@ export default function FoodCard({ item }) {
   return (
     <Link
       to={`/menu?category=${item.category.slug}#${item.slug}`}
-      className="food-card"
+      className={`food-card ${color}${item.imageUrl ? " has-image" : ""}`}
     >
-      <div className={`food-image ${color}`}>
-        {item.imageUrl ? (
+      {/* Only real photos; no placeholder art. */}
+      {item.imageUrl && (
+        <div className="food-image">
           <img src={item.imageUrl} alt={item.name} loading="lazy" />
-        ) : (
-          <i className={`ti ${item.category.icon}`}></i>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="food-body">
-        <div className={`tag ${color}`}>{item.badge ?? item.subcategory.name}</div>
+        <div className="tag">{item.badge ?? item.subcategory.name}</div>
         <div className="food-title">{item.name}</div>
         {item.description && <div className="food-desc">{item.description}</div>}
         <div className="food-footer">
           <div className="food-price">{formatPrice(item.price)}</div>
+          <span className="food-more">
+            See on menu <i className="ti ti-arrow-right"></i>
+          </span>
         </div>
       </div>
     </Link>

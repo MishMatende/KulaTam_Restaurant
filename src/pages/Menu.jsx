@@ -151,14 +151,9 @@ export default function Menu() {
         sections.map((category) => (
           <section key={category.slug} className="menu-category">
             {!activeCategory && (
-              <div className="menu-category-head">
-                <div className={`mini-icon ${category.tone}`}>
-                  <i className={`ti ${category.icon}`}></i>
-                </div>
-                <div>
-                  <h2>{category.name}</h2>
-                  <p>{category.description}</p>
-                </div>
+              <div className={`menu-category-head ${category.tone}`}>
+                <h2>{category.name}</h2>
+                <p>{category.description}</p>
               </div>
             )}
 
@@ -172,21 +167,18 @@ export default function Menu() {
                       id={item.slug}
                       className={`menu-item${highlight === item.slug ? " highlight" : ""}`}
                     >
-                      <div className="menu-item-info">
-                        <div className="menu-item-name">
-                          {item.name}
-                          {item.badge && <span className="badge-inline">{item.badge}</span>}
-                          {item.veg && (
-                            <span className="veg-badge" title="Vegetarian">
-                              <i className="ti ti-leaf"></i>Veg
-                            </span>
-                          )}
-                        </div>
-                        {item.description && (
-                          <div className="menu-item-desc">{item.description}</div>
-                        )}
+                      <div className="menu-item-line">
+                        <h4 className="menu-item-name">{item.name}</h4>
+                        <span className="leader" aria-hidden="true"></span>
+                        <span className="menu-item-price">{formatPrice(item.price)}</span>
                       </div>
-                      <div className="menu-item-price">{formatPrice(item.price)}</div>
+                      {item.description && <p className="menu-item-desc">{item.description}</p>}
+                      {(item.badge || item.veg) && (
+                        <div className="menu-item-tags">
+                          {item.badge && <span className="badge-inline">{item.badge}</span>}
+                          {item.veg && <span className="veg-badge">Vegetarian</span>}
+                        </div>
+                      )}
                     </article>
                   ))}
                 </div>

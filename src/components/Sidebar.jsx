@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation, useSearchParams } from "react-router-dom";
 import { RESTAURANT } from "../config";
+import Wordmark from "./Wordmark";
 import { useMenu } from "../context/MenuContext";
 import { useOpenStatus } from "../lib/useOpenStatus";
 
@@ -14,7 +15,9 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div>
         <div className="brand">
-          <h2>{RESTAURANT.name}</h2>
+          <h2>
+            <Wordmark />
+          </h2>
           <p>
             {RESTAURANT.location}
             <br />
